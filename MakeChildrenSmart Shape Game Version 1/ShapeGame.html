@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+@font-face { font-family: Absender; src: url('absender1.ttf'); } 
+
+* {
+	user-select:none;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	-webkit-user-drag: none;
+}
+
+#Menu {
+	position:absolute;
+	overflow-y:auto;
+	background-color:#fff5d3;
+}
+
+#Menu * {
+	position:absolute;
+}
+
+body {
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+.menuButtons {
+	font-size:1.3vw; 
+	font-family:Absender;
+	border:0.2vw solid;
+	border-radius:0.5vw;
+	box-shadow:0 0 2vw rgba(255, 0, 0, 0);	
+	transition:0.2s;
+	transition-property:box-shadow;
+}
+.menuButtons:hover {
+	box-shadow: 0 0 2vw rgba(255, 0, 0, 0.9);
+}
+
+#MeetShapes {
+	width:12vw; 
+	height:3vw; 
+	top:32vw;
+	left:44vw;
+	color:black;
+	background-color:yellow;
+	border-color:orange;
+}
+
+#Practice {
+	width:12vw; 
+	height:3vw; 
+	top:28vw;
+	left:44vw;
+	color:black;
+	background-color:pink;
+	border-color:orange;
+}
+
+.MenuChat {
+	opacity: 0;
+	transition: 0.2s;
+	transition-property: opacity;
+}
+
+.MenuHover {
+	outline:none; 
+	border-radius:10vw;
+	background-color:rgba(0, 0, 0, 0);
+	border-color:rgba(0, 0, 0, 0);
+	box-shadow:0 0 3vw rgba(255, 255, 0, 0);
+	border-color: rgba(0, 0, 0, 0);	
+	transition:0.2s;
+}
+.MenuHover:hover {
+	box-shadow: 0 0 5vw 2vw rgba(255, 255, 0, 1);
+	border-color: rgba(0, 0, 0, 1);	
+}
+
+</style>
+</head>
+
+<body>
+<!-- Div containing the main menu -->
+<div id='Menu' style="width:100vw; height:100vh;">
+	
+	<!-- Main Menu image -->
+	<img id="MenuImage" src="Images/menuBG.png" alt="" style="left:15vw; top:-7vw; height:48vw; width:70vw;"> </img>
+	<!-- Chat boxes to identify shapes -->
+	<img class="MenuChat" id="ChatSquare" src="Images/amsquare.png" alt="" style="left:55vw; top:6.5vw; height:8vw; width:14vw;"> </img>
+	<img class="MenuChat" id="ChatCircle" src="Images/amcircle.png" alt="" style="left:15vw; top:6.5vw; height:8vw; width:14vw;"> </img>
+	<img class="MenuChat" id="ChatHex" src="Images/amhexagon.png" alt="" style="left:35vw; top:4vw; height:8vw; width:14vw;"> </img>
+		
+	<!-- Buttons to select what you wanna do -->
+	<button id="MeetShapes" class="menuButtons" style=""> MEET THE SHAPES </button>
+	<button id="Practice" class="menuButtons" style=""> PRACTICE SKILLS </button>
+	<!-- Hover for shapes -->
+	<button class="MenuHover" id="CircleHover" style="width:10vw; height:10vw; top:14.6vw; left:24.4vw;"> </button>
+	<button class="MenuHover" id="SquareHover" style="width:9.4vw;height:9.4vw;top:16vw;left:64.8vw;"> </button>
+	<button class="MenuHover" id="HexagonHover" style="width:9.6vw; height:9.6vw; top:12.5vw; left:44.5vw;"> </button>
+	
+
+</div>
+</body>
+
+<!-- The script! -->
+<script src="ShapeGame.js"> </script>
+
+</html>
